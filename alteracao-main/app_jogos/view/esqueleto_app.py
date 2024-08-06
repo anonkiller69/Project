@@ -13,7 +13,7 @@ class Header:
 class Body:
     def __init__(self, principal):
         self.principal = principal
-        self.container_frame = Framecustomizado(self.root, width=400, height=400, bg='blue')
+        self.container_frame = Framecustomizado(self.principal, width=400, height=400, bg='blue')
         self.container_frame.grid_propagate(False)
         self.container_frame.grid(row=0, column=0)
         self.card_frame()
