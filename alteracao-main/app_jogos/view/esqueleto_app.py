@@ -1,15 +1,14 @@
 from tkinter import ttk
 import tkinter as tk
-from elementos_tkinter import Labelcustomizada, Buttoncustomizado, CheckButtoncustomizado, LabelcustomizadaTitulo, Mensagens, Framecustomizado
-from imagens import imagens
-
+from elementos_tkinter import Labelcustomizada, Buttoncustomizado, CheckButtoncustomizado, LabelcustomizadaTitulo, Mensagens, Framecustomizado, LabelImage
+from images import CarregaImagem
 
 
 class Header:
     pass
 
         
-        
+
 
 class Body:
     def __init__(self, principal):
@@ -20,17 +19,17 @@ class Body:
         self.card_frame()
 
     #as imagens e os jogos estarão dentro de um frame
-    def card_frame(self):
+    def card_frames(self):
         #config de card
         self.largura_padrao = 200
         self.altura_padrao = 300
         self.card = Framecustomizado(self.container_frame, bg='red', width=self.largura_padrao, height=self.altura_padrao)
         self.card.grid(row=5, column=0)
 
+        self.label_exibe_imagem = LabelImage(self.card, image = CarregaImagem('contra.jpg'))
 
 
 
-        
     
 class AppGames:
     def __init__(self, root):

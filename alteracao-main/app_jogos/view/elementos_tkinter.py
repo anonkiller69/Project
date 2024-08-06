@@ -57,6 +57,8 @@ def Textcustomizado(master, **args):
   args.setdefault('height', '0')
   return tk.Text(master, borderwidth=1, relief=tk.SOLID,**args)
 
+def LabelImage(master, **args):
+  return tk.Label(master, **args)
 
 def Entrycustomizado(master, **args):
   return tk.Entry(master, borderwidth=1, relief=tk.SOLID,**args)
