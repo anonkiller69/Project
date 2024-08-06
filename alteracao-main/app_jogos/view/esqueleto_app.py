@@ -20,7 +20,10 @@ class Body:
 
     #as imagens e os jogos estarão dentro de um frame
     def card_frame(self):
-        self.card = Framecustomizado(self.container_frame, bg='red', width=200, height=300)
+        #config de card
+        self.largura_padrao = 200
+        self.altura_padrao = 300
+        self.card = Framecustomizado(self.container_frame, bg='red', width=self.largura_padrao, height=self.altura_padrao)
         self.card.grid(row=5, column=0)
 
 
