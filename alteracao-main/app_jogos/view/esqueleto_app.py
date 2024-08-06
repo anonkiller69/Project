@@ -1,6 +1,7 @@
 from tkinter import ttk
 import tkinter as tk
 from elementos_tkinter import Labelcustomizada, Buttoncustomizado, CheckButtoncustomizado, LabelcustomizadaTitulo, Mensagens, Framecustomizado
+from imagens import imagens
 
 
 
@@ -25,6 +26,8 @@ class Body:
         self.altura_padrao = 300
         self.card = Framecustomizado(self.container_frame, bg='red', width=self.largura_padrao, height=self.altura_padrao)
         self.card.grid(row=5, column=0)
+
+
 
 
         
