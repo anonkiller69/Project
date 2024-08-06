@@ -16,7 +16,7 @@ class Body:
         self.container_frame = Framecustomizado(self.principal, width=400, height=400, bg='blue')
         self.container_frame.grid_propagate(False)
         self.container_frame.grid(row=0, column=0)
-        self.card_frame()
+        self.card_frames()
 
     #as imagens e os jogos estarão dentro de um frame
     def card_frames(self):
