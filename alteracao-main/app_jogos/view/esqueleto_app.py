@@ -25,8 +25,8 @@ class Body:
         self.altura_padrao = 300
         self.card = Framecustomizado(self.container_frame, bg='red', width=self.largura_padrao, height=self.altura_padrao)
         self.card.grid(row=5, column=0)
-
-        self.label_exibe_imagem = LabelImage(self.card, image = CarregaImagem('contra.jpg'))
+        self.x = CarregaImagem('contra.jpg')
+        self.label_exibe_imagem = LabelImage(self.card, image = self.x )
 
 
 
