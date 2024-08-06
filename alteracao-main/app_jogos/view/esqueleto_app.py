@@ -13,10 +13,11 @@ class Body:
         self.container_frame = Framecustomizado(self.root, width=400, height=400, bg='blue')
         self.container_frame.grid_propagate(False)
         self.container_frame.grid(row=0, column=0)
+        self.root.mainloop()
         
     
 class AppGames:
-    def __init__(self, root : tk):
+    def __init__(self, root):
         self.root = root
         self.root.title('AppRom')
     
