@@ -1,14 +1,6 @@
-from tkinter import ttk
 import tkinter as tk
-from elementos_tkinter import Labelcustomizada, Buttoncustomizado, CheckButtoncustomizado, LabelcustomizadaTitulo, Mensagens, Framecustomizado, LabelImage
-from images import CarregaImagem
-
-
-class Header:
-    pass
-
-        
-
+from elementos_tkinter import Framecustomizado, LabelImage
+from images import CarregaImagem  # Assumindo que `CarregaImagem` está definido corretamente
 
 class Body:
     def __init__(self, principal):
@@ -18,31 +10,30 @@ class Body:
         self.container_frame.grid(row=0, column=0)
         self.card_frames()
 
-    #as imagens e os jogos estarão dentro de um frame
     def card_frames(self):
-        #config de card
-        self.largura_padrao = 200
-        self.altura_padrao = 300
-        self.card = Framecustomizado(self.container_frame, bg='red', width=self.largura_padrao, height=self.altura_padrao)
-        self.card.grid(row=5, column=0)
-        self.x = CarregaImagem('contra.jpg')
-        self.label_exibe_imagem = LabelImage(self.card, image = self.x )
+        # Configuração do card
+        largura_padrao = 200
+        altura_padrao = 300
+        card = Framecustomizado(self.container_frame, bg='red', width=largura_padrao, height=altura_padrao)
+        card.grid(row=5, column=0)
 
+        # Carregar e exibir a imagem dentro do card
+        imagem_path = 'contra.jpg'  # Substitua pelo caminho correto da sua imagem
+        imagem_carregada = CarregaImagem(imagem_path)  # Carrega a imagem usando a classe CarregaImagem
 
+        label_exibe_imagem = LabelImage(card, image=imagem_carregada.photo)
+        label_exibe_imagem.pack()
 
-    
 class AppGames:
     def __init__(self, root):
         self.root = root
         self.root.title('AppRom')
         self.corpo()
-    
+
     def corpo(self):
         self.body_app = Body(self.root)
 
-root = tk.Tk()
-app = AppGames(root)
-root.mainloop()
-    
-
-        
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = AppGames(root)
+    root.mainloop()
